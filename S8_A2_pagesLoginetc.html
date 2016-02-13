@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Assigments8</title>
+			<link href='https://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+			<style type="text/css">
+			body{
+				margin: 0;
+				background-color: gray;
+			}
+			#wrapper {
+				width: 90%;
+				margin: 0 auto;
+				background-color: #EEEEEE;
+				margin-top: 0;
+				border: 2px solid midnightBlue;
+				background: url("fashion.jpg") no-repeat center center;
+				-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #EEEEEE;
+  		background-blend-mode: multiply;
+  		min-height: 550px;
+			}
+				header{
+				text-align: center;
+				background-color: midnightBlue;
+				color: #CB724F;
+				padding: 5px;
+				line-height: .5;
+				margin-top: 0;
+				opacity: 0.9;
+
+			}
+			h1{
+				font-size: 48px;
+				mix-blend-mode: lighten; 
+				/*text-shadow: 1px 1px gray	;*/
+				font-family: 'Euphoria Script', cursive;
+				letter-spacing: 2px;
+			}
+
+			h2 {
+				mix-blend-mode: lighten;
+				font-family: 'Euphoria Script', cursive;
+				letter-spacing: 1.5px;
+
+
+			}
+
+			footer {
+				margin-bottom: 0;
+				margin-top: 80px;
+				padding: 10px;
+				display: none;
+			}
+			section{
+				margin-top: 40px;
+				width: 290px;
+				padding-bottom: 2px;
+				background-color: lightgray ;
+				margin-left: 10px;
+				/*display: none;
+*/
+				
+			}
+
+			#loggedInUser {
+				text-transform: capitalize;
+				
+			}
+
+			label {
+				width: 140px;
+				padding: 10px;
+				display: inline-block;
+				font-size: 22px;
+				font-weight: bold;
+				font-family: 'Euphoria Script', cursive;
+				color: dimgray;
+			}
+			input, button {
+				width: 100px;
+				padding: 5px;
+				background-color: midnightBlue;
+				color: silver	;
+				font-weight: bold;
+				font-family: 'Euphoria Script', cursive;
+				font-size: 18px;
+				letter-spacing: 1px;
+			}
+
+			.fields {
+				width: 280px;
+				background-color: lightGray;
+				color: dimGray;
+				margin-left: 10px;
+			}
+			
+			#fform{
+				margin-bottom: 2px;
+			}
+			#sform{
+				margin-bottom: 2px;
+				margin-top: 1px;
+			}
+			.subBut {
+				margin-left: 10px;
+			}
+			#forcss{
+				width: 40%;
+				font-size: 40px;
+				color: dimGray;
+			}
+
+			.back-button{
+				margin-left: 10px;
+				margin-top: 30px;
+			}
+
+			</style>
+			<script type="text/javascript" src="test.js"></script> 
+		</head>
+
+<body onload = "initialLoad()">
+		
+	<div id ="wrapper">
+		<header>
+			<h1>Frame and Click</h1>
+			<h2>Enroll now to access best online Course in Fashion Photography</h2>
+		</header>
+
+		<section id ="defaultDisplay">
+			<label>New Users</label>
+			<button onclick="signup()">SignUp</button> 
+			<label>Already a member</label>
+			<button onclick="login()">Login</button> 
+		</section>
+
+		<div id="signup">
+			<label>SignUp</label>
+			<form onsubmit="signupSubmit()" action="#">
+				<input class="fields" type="text" id="signup-name" placeholder="Name" required><br>
+				<input class="fields" type="email" id="signup-email" placeholder="Email" required><br>
+				<input class="fields" type="password" id="signup-password" placeholder="Password" required><br><br>
+				<input type="submit" class ="subBut">
+			</form>
+			<p><button class="back-button" onclick="initialLoad()">Back</button>
+		</div>
+
+		<div id="login">
+			<label>Login</label>
+			<form onsubmit="loginSubmit()" action="#">
+			<input type="email" id="login-email" class="fields" placeholder="Email" required><br>
+			<input type="password" id="login-password" class="fields" placeholder="Password"
+			required><br><br>
+			<input type="submit" class ="subBut">
+			</form>
+			<label id="errorMsg"></label>
+			<p><button class="back-button" onclick="initialLoad()">Back</button>
+			</div>
+
+
+
+
+
+
+		<div id="home"> 
+      <label id= "forcss"><span id="loggedInUser">hello!&nbsp;</span> Welcome to Frame  and Click </label><div> 
+       <p> <button class="back-button" onclick="logout()">Logout</button>                 
+      </div> 
+    </div> 
+
+		<footer>
+		
+			<p>Problem Statement: Create one html file ,<br> 
+			<ol>
+				<li> There will be one main page that hold login and signup button.</li> 
+				<li> Once user will click one signup button , it will open signup module with this fields– name , email ,password</li> 
+				<li>And then user can go back in main page . and user can try login with email and password . if email and password will correct than user will redirect to home page  
+				<li> If email and password is incorrect than it will show error message . 
+				<li> And in home page you have to show some message like – welcome to “username”. With logout button.
+				<li>And once user will click on logout , user will redirect to main page  
+			</ol>
+		</footer>	
+	</div>
+</body>
+	</html>
